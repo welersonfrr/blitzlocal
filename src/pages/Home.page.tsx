@@ -79,7 +79,7 @@ const Home = () => {
         >
           <iframe
             width="100%"
-            height="100%"
+            height="300px"
             title="maps"
             src="https://maps.google.com/maps?q=cascavel&t=&z=12&ie=UTF8&iwloc=&output=embed"
           />
