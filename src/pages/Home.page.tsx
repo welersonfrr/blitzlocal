@@ -119,7 +119,7 @@ const Home = () => {
           />
         </motion.div>
         <div className="m-4">
-          <p className="text-white font-semibold pb-4 before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-2  before:bg-gradient-to-r from-[#6CAAF9] to-white">
+          <p className="text-white font-semibold pb-4 before:absolute before:rounded-lg before:content before:w-32 before:h-1 before:-bottom-16  before:bg-gradient-to-r from-[#6CAAF9] to-white">
             Como Funciona?
           </p>
           <p className="text-sm text-white">
