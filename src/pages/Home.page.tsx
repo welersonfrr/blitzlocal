@@ -4,21 +4,20 @@ import { collection, addDoc } from "firebase/firestore";
 import { firestore } from "../firebaseConfig";
 
 const Home = () => {
-  const [locationData, setLocationData] = useState<any>(undefined);
-
   const options = {
     enableHighAccuracy: true,
     timeout: 5000,
     maximumAge: 0,
   };
   const getLocation = async (position: any) => {
+    const now = new Date();
     const coords = position.coords;
-    setLocationData(coords);
     const mapsLink = `https://www.google.com/maps/place/${coords.latitude}+${coords.longitude}`;
 
     try {
       const docRef = await addDoc(collection(firestore, "locations"), {
         maps: mapsLink,
+        timestamp: now,
       });
     } catch (error: any) {
       console.log(error.tostring());
@@ -33,12 +32,6 @@ const Home = () => {
     <div>
       <div>
         <button onClick={obtainLocation}>Click-me 4</button>
-        {locationData !== undefined && (
-          <p>
-            https://www.google.com/maps/place/{locationData.latitude}+
-            {locationData.longitude}
-          </p>
-        )}
       </div>
     </div>
   );
