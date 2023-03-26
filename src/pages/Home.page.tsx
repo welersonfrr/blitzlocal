@@ -39,35 +39,47 @@ const Home = () => {
   return (
     <div className="h-full min-h-screen w-screen flex flex-col bg-gradient-to-br from-[#2B31A5] to-[#6265EB] gap-3">
       {/* title/sub */}
-      <div className="m-6">
+      <motion.div
+        initial={{ opacity: 0, x: 200 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="m-6"
+      >
         <h1 className="text-[3.5rem] font-bold text-white">
-          Chega de surpresas! 🚔🚦
+          Veja se há Blitz próximo de você! 🚔🚦
         </h1>
         <p className="text-md text-white">
           Monitore agora mesmo as blitz que estão acontecendo ao seu redor e não
           seja mais pego desprevenido.
         </p>
-      </div>
+      </motion.div>
       {/* button */}
-      <div className="w-full mt-4 flex items-center justify-center drop-shadow-lg">
+      <motion.div
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="w-full mt-4 flex items-center justify-center drop-shadow-lg"
+      >
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="p-4 rounded-md bg-[#6caaf9] text-white font-semibold"
           onClick={obtainLocation}
         >
-          Testar agora
+          Verificar se há blitz por perto
         </motion.button>
-      </div>
+      </motion.div>
       {/* map */}
-      <div className="m-6 w-auto h-auto min-h-[300px] bg-white rounded-2xl border-2 border-[#6caaf9] overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="m-6 w-auto h-auto min-h-[300px] bg-white rounded-2xl border-2 border-[#6caaf9] overflow-hidden"
+      >
         <iframe
           width="100%"
           height="300px"
           title="maps"
           src="https://maps.google.com/maps?q=cascavel&t=&z=12&ie=UTF8&iwloc=&output=embed"
         ></iframe>
-      </div>
+      </motion.div>
       {/* loading */}
       {loading && (
         <div className="absolute w-screen h-screen flex items-center justify-center backdrop-blur-sm bg-white/30">
