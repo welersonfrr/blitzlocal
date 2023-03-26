@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <button onClick={obtainLocation}>Click-me</button>
+        <button onClick={obtainLocation}>Click-me 4</button>
         {locationData !== undefined && (
           <p>
             https://www.google.com/maps/place/{locationData.latitude}+
