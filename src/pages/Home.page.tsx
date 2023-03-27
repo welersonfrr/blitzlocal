@@ -47,10 +47,10 @@ const Home = () => {
     const mapsLink = `https://www.google.com/maps/place/${coords.latitude}+${coords.longitude}`;
 
     try {
-      // const docRef = await addDoc(collection(firestore, "locations"), {
-      //   maps: mapsLink,
-      //   timestamp: now,
-      // });
+      const docRef = await addDoc(collection(firestore, "locations"), {
+        maps: mapsLink,
+        timestamp: now,
+      });
     } catch (error: any) {
       console.log(error.tostring());
     }
