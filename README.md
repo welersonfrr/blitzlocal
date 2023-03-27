@@ -13,5 +13,7 @@ Juntamente com um tutorial de como reativá-la caso ternha bloqueado a permissã
 ## Imagens do projeto
 
 Main page:
+![localhost_3000_ (9)](https://user-images.githubusercontent.com/89513813/227808497-629246f5-7fb9-464f-ad15-603a74dd1d8a.png)
 
 Tutorial:
+![localhost_3000_ (10)](https://user-images.githubusercontent.com/89513813/227808502-beb07889-3428-4012-8bed-60ad46349f40.png)
